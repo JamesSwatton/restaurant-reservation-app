@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bord</title>
+    <script src="vue.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <section class="booking-form">
+            <form action="" @submit.prevent="makeBooking">
+                <label for="first-name">First Name:</label>
+                <input id="first-name" type="text" v-model="newBooking.firstName">
+
+                <label for="last-name">Last Name:</label>
+                <input id="last-name" type="text" v-model="newBooking.lastName">
+
+                <label for="phone-num">Phone:</label>
+                <input id="phone-num" type="text">
+
+                <label for="party-size">Party Size:</label>
+                <input id="pary-size" type="number">
+
+                <label for="table-num">Table:</label>
+                <input id="table-num"type="number">
+
+                <input type="">
+                <input type="">
+                <input type="submit" value="Make Booking">
+            </form>
+        </section>
+        <ul>
+            <li v-for="booking in bookings">
+
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+
